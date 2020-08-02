@@ -1,8 +1,7 @@
 :root{
     --primary-color: rgba(13, 110, 139, 0.75); /* last value makes it transparent*/
-    --overlay-color:    rgba(147, 90, 221, 0.808);
-    --menu-speed: 4s;
-    text-decoration: none;
+    --overlay-color:    rgba(24, 39, 51, 0.85);
+    --menu-speed: 0.75s;
 }
 *{
     margin: 0;
@@ -10,22 +9,26 @@
     box-sizing: border-box;
 }
 body{
+    font: 16px; 
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
     height: 100vh;
-    background-color: rgb(58, 5, 12);
+    background-color: gray;
 }
+
 .dropdown{
     height: 10vh;
-    width: 80%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 80%;
     margin: auto;
-    text-decoration: none;
+}
+.projects, .products{
+    position: relative;
 }
 .projects ul, .products ul{
     position: absolute;
-    background-color: blueviolet;
+    background-color: white;
     margin-top: 10px;
     width: 200px;
     height: 200px;
@@ -35,51 +38,55 @@ body{
     flex-direction: column;
     list-style: none;
     border-radius: 5px;
-    opacity: 0; 
-    pointer-events: none;
-    transition: all 0.4s ease;
+    opacity: 0;  /**/
+    pointer-events: none;  /**/
+    transition: all 0.4s ease;  /**/
+    transform: translateY(-10px);  /**/
+}
+.products a, .projects a{
     text-decoration: none;
 }
 .dropdown button{
     background: none;
     border: none;
-    text-decoration-line: none;
 }
 .dropdown button, .home{
     text-decoration: none;
     font-size: 18px;
     cursor: pointer;
     background: none;
+    text-decoration: none;
     border: none;
     color: white;
 }
-.dropdown button:hover, .home:hover{
-    background-color: lightslategray;
-    text-decoration: none;
+.dropdown button:hover, 
+.home:hover{
+    background-color: lightgrey;
 }
-.projects button:focus + ul, 
-.products button:focus + ul{
-    opacity: 1;
-    pointer-events: all;
-}
-.products li:hover, 
-.projects li:hover{
-    background-color: mediumaquamarine;
-}
-.products li, 
-.projects li{
+.projects li, .products li{
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
 }
+.products li:hover, 
+.projects li:hover{
+    background-color: mediumaquamarine;
+}
+.projects button:focus + ul,
+.products button:focus + ul{
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+}
+
+
+/* footer */
 .footer{
-    height: 13vh;
-    width: 100%;
     background-color: black;
     position: absolute;
     bottom: 0;
+    width: 100%;
+    height: 15vh;
 }
-
