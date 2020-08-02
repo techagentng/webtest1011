@@ -1,7 +1,8 @@
 :root{
     --primary-color: rgba(13, 110, 139, 0.75); /* last value makes it transparent*/
-    --overlay-color:    rgba(24, 39, 51, 0.85);
-    --menu-speed: 0.75s;
+    --overlay-color:    rgba(147, 90, 221, 0.808);
+    --menu-speed: 4s;
+    text-decoration: none;
 }
 *{
     margin: 0;
@@ -11,7 +12,7 @@
 body{
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
     height: 100vh;
-    background-color: gray;
+    background-color: rgb(58, 5, 12);
 }
 .dropdown{
     height: 10vh;
@@ -20,10 +21,11 @@ body{
     justify-content: space-around;
     align-items: center;
     margin: auto;
+    text-decoration: none;
 }
 .projects ul, .products ul{
     position: absolute;
-    background-color: white;
+    background-color: blueviolet;
     margin-top: 10px;
     width: 200px;
     height: 200px;
@@ -36,10 +38,12 @@ body{
     opacity: 0; 
     pointer-events: none;
     transition: all 0.4s ease;
+    text-decoration: none;
 }
 .dropdown button{
     background: none;
     border: none;
+    text-decoration-line: none;
 }
 .dropdown button, .home{
     text-decoration: none;
@@ -51,6 +55,7 @@ body{
 }
 .dropdown button:hover, .home:hover{
     background-color: lightslategray;
+    text-decoration: none;
 }
 .projects button:focus + ul, 
 .products button:focus + ul{
@@ -68,6 +73,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 .footer{
     height: 13vh;
